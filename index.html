@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SocialSphere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>SocialSphere</h2>
+  <img src="https://i.pravatar.cc/40" class="avatar">
+</header>
+
+<nav>
+  <button onclick="showPage('feed')">🏠 Feed</button>
+  <button onclick="showPage('reels')">🎬 Reels</button>
+  <button onclick="showPage('chats')">💬 Chats</button>
+  <button onclick="showPage('profile')">👤 Profile</button>
+</nav>
+
+<!-- FEED -->
+<section id="feed" class="page">
+  <div class="post">
+    <h4>@alex</h4>
+    <p>Enjoying the vibes ✨</p>
+    <span>❤️ 124</span>
+  </div>
+  <div class="post">
+    <h4>@emma</h4>
+    <p>Sunset diaries 🌅</p>
+    <span>❤️ 98</span>
+  </div>
+</section>
+
+<!-- REELS -->
+<section id="reels" class="page hidden">
+  <div class="reel">🎬 Reel 1</div>
+  <div class="reel">🎬 Reel 2</div>
+  <div class="reel">🎬 Reel 3</div>
+</section>
+
+<!-- CHATS -->
+<section id="chats" class="page hidden chat-page">
+  <div class="chat-list">
+    <div class="chat-user" onclick="openChat('Alex')">Alex</div>
+    <div class="chat-user" onclick="openChat('Emma')">Emma</div>
+    <div class="chat-user" onclick="openChat('John')">John</div>
+    <div class="chat-user" onclick="openChat('Sophia')">Sophia</div>
+  </div>
+
+  <div class="chat-box">
+    <h3 id="chatName">Select a chat</h3>
+    <div class="messages" id="messages"></div>
+    <input type="text" placeholder="Type a message..." disabled>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="page hidden profile">
+  <img src="https://i.pravatar.cc/100">
+  <h3>@yourname</h3>
+  <p>Followers: 340 | Following: 180</p>
+  <button>Edit Profile</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
